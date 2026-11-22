@@ -2,14 +2,23 @@
 <html lang="tr">
 <head>
 <meta charset="utf-8">
+<script>document.documentElement.classList.add("js")</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>POZKAP | Pozitif Karakter Psikoeğitim Programı</title>
 <meta name="description" content="Üniversite öğrencilerinin uyumunu ve iyi oluşunu karakter güçleriyle destekleyen, yüz yüze ve çevrimiçi uygulanan psikoeğitim programı. Sinop Üniversitesi, TÜBİTAK 3501 projesi.">
+<meta property="og:description" content="Üniversite öğrencilerinin uyumunu ve iyi oluşunu karakter güçleriyle destekleyen, yüz yüze ve çevrimiçi uygulanan psikoeğitim programı. Sinop Üniversitesi, TÜBİTAK 3501 projesi.">
 <link rel="alternate" hreflang="en" href="en/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<meta name="theme-color" content="#fbfbfd" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#14132a" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:title" content="POZKAP | Pozitif Karakter Psikoeğitim Programı">
+<meta property="og:url" content="https://pozkap.github.io/">
+<meta property="og:image" content="https://pozkap.github.io/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 </head>
 <body>
@@ -49,9 +58,10 @@
 
       <figure class="strengths" aria-labelledby="guc-baslik">
         <div class="strengths-head">
-          <strong id="guc-baslik">24 karakter gücü, 6 erdem</strong>
-          <p>Peterson ve Seligman (2004) sınıflaması</p>
+          <strong id="guc-baslik">Altı erdem, 24 karakter gücü</strong>
+          <p>Bir erdem seçin ya da bir dilimi inceleyin</p>
         </div>
+        <div class="wheel-wrap"><div class="wheel-center" aria-live="polite"><b class="big">24</b><span>karakter gücü</span></div></div>
         <ul class="field" id="field">
           <li class="bilgelik">Yaratıcılık</li><li class="bilgelik">Merak</li><li class="bilgelik">Açık fikirlilik</li><li class="bilgelik">Öğrenme sevgisi</li><li class="bilgelik">Bakış açısı</li>
           <li class="cesaret">Cesaret</li><li class="cesaret">Azim</li><li class="cesaret">Dürüstlük</li><li class="cesaret">Zindelik</li>
@@ -72,14 +82,15 @@
     </div>
   </section>
 
-  <section class="section" id="program">
+  <section class="section tint" id="program">
     <div class="wrap">
-      <div class="section-head">
+      <div class="section-head reveal">
         <h2>Bir program, iki uygulama biçimi</h2>
         <p>Geleneksel uyum programları çoğunlukla sorunları azaltmaya ve bilgi vermeye odaklanır. POZKAP ise öğrencinin güçlü yönlerini keşfetmesini ve bunları üniversite yaşamında kullanmasını hedefler. İçerik, öğrencilerle yapılacak bir ihtiyaç analizine dayanarak geliştirilecektir.</p>
       </div>
-      <div class="formats">
+      <div class="formats reveal">
         <article class="format">
+          <div class="format-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><path d="M15 14.5c.6-.3 1.3-.5 2-.5 2.2 0 4 1.8 4 4"/></svg></div>
           <h3>Yüz yüze grup oturumları</h3>
           <p>Psikolojik danışmanlık ve rehberlik alanında uzman iki grup lideri eşliğinde, yapılandırılmış etkinliklerle yürütülen haftalık oturumlar.</p>
           <ul class="facts">
@@ -89,6 +100,7 @@
           </ul>
         </article>
         <article class="format">
+          <div class="format-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M10.5 18.5h3"/><path d="M9 8.5l2 2 4-4"/></svg></div>
           <h3>Çevrimiçi kendi kendine yardım</h3>
           <p>Öğrencinin kendi hızında ilerlediği web tabanlı platform. Ön değerlendirmeyle kişiselleştirilen içerik, haftalık görevler, kaynak kütüphanesi ve moderasyonlu bir paylaşım alanı içerir.</p>
           <ul class="facts">
@@ -102,11 +114,11 @@
 
   <section class="section" id="temel">
     <div class="wrap">
-      <div class="section-head">
+      <div class="section-head reveal">
         <h2>Kuramsal temel</h2>
         <p>Program üç çerçeveyi bir araya getirir. Karakter güçleri programın aracıdır, PERMA iyi oluşu, uyum modeli ise üniversite yaşamının boyutlarını tanımlar.</p>
       </div>
-      <div class="basis">
+      <div class="basis reveal">
         <div>
           <h3>Karakter güçleri</h3>
           <p>Peterson ve Seligman'ın (2004) sınıflaması, olumlu özellikleri altı erdem altında toplanan 24 güçle tanımlar.</p>
@@ -126,57 +138,63 @@
 
   <section class="section" id="surec">
     <div class="wrap">
-      <div class="section-head">
+      <div class="section-head reveal">
         <h2>Proje süreci</h2>
         <p>Proje beş iş paketinden oluşur. Her aşamanın bulguları bir sonrakine yön verir.</p>
       </div>
+      <div class="months" aria-hidden="true"><span>ay</span><div class="scale"><span style="left:1.67%">1</span><span style="left:18.33%">6</span><span style="left:38.33%">12</span><span style="left:58.33%">18</span><span style="left:78.33%">24</span><span style="left:98.33%">30</span></div></div>
       <ol class="steps">
-        <li>
+        <li class="reveal">
           <div><h3>İhtiyaç analizi</h3><p>Öğrencilerle bireysel görüşmeler ve görüşme bulgularına dayanan geniş katılımlı bir anket.</p></div>
           <p class="out"><b>ÇIKTI</b>Öğrencilerin öncelikli ihtiyaçları</p>
+          <div class="bar" style="--s:1;--e:8"><i></i><em>1–8. ay</em></div>
         </li>
-        <li>
+        <li class="reveal">
           <div><h3>Programın geliştirilmesi</h3><p>Program ve öğrenme çıktıları, 12 oturumluk etkinlik ve materyaller, uzman görüşü.</p></div>
           <p class="out"><b>ÇIKTI</b>Uygulayıcı kılavuzu ve oturum materyalleri</p>
+          <div class="bar" style="--s:9;--e:16"><i></i><em>9–16. ay</em></div>
         </li>
-        <li>
+        <li class="reveal">
           <div><h3>Çevrimiçi platformun geliştirilmesi</h3><p>Mobil uyumlu, modüler ve kişisel verileri koruyan kendi kendine yardım platformu.</p></div>
           <p class="out"><b>ÇIKTI</b>Çevrimiçi kendi kendine yardım platformu</p>
+          <div class="bar" style="--s:10;--e:16"><i></i><em>10–16. ay</em></div>
         </li>
-        <li>
+        <li class="reveal">
           <div><h3>Pilot ve deneysel uygulama</h3><p>Pilot çalışma ve revizyonun ardından kontrol gruplu deneysel uygulama.</p></div>
           <p class="out"><b>ÇIKTI</b>Ön test, son test ve izleme verileri</p>
+          <div class="bar end" style="--s:17;--e:24"><i></i><em>17–24. ay</em></div>
         </li>
-        <li>
+        <li class="reveal">
           <div><h3>Değerlendirme ve yaygınlaştırma</h3><p>Nicel ve nitel bulguların bütünleştirilmesi, kitapçık, uygulayıcı eğitimi ve platformun herkese açılması.</p></div>
           <p class="out"><b>ÇIKTI</b>Bilgilendirme kitapçığı, bildiriler ve makaleler</p>
+          <div class="bar end" style="--s:25;--e:30"><i></i><em>25–30. ay</em></div>
         </li>
       </ol>
     </div>
   </section>
 
-  <section class="section" id="ekip">
+  <section class="section tint" id="ekip">
     <div class="wrap">
-      <div class="section-head">
+      <div class="section-head reveal">
         <h2>Proje ekibi</h2>
         <p>Psikolojik danışmanlık ve rehberlik, eğitim programları ve öğretim, öğretim teknolojileri alanlarından araştırmacılar.</p>
       </div>
-      <ul class="team">
-        <li class="lead-card"><div class="role">Yürütücü</div><div class="name">Doç. Dr. İbrahim Demirci</div></li>
-        <li><div class="role">Araştırmacı</div><div class="name">Doç. Dr. Osman Hatun</div></li>
-        <li><div class="role">Araştırmacı</div><div class="name">Doç. Dr. Rahime Çobanoğlu Beyçayiri</div></li>
-        <li><div class="role">Araştırmacı</div><div class="name">Doç. Dr. Gürol Yokuş</div></li>
-        <li><div class="role">Araştırmacı</div><div class="name">Dr. Öğr. Üyesi Mehmet Berkay Özünlü</div></li>
-        <li><div class="role">Araştırmacı</div><div class="name">Dr. Öğr. Üyesi Ozan Filiz</div></li>
-        <li><div class="role">Danışman</div><div class="name">Prof. Dr. Şerife Gonca Zeren</div></li>
-        <li><div class="role">Danışman</div><div class="name">Prof. Dr. Şerife Işık</div></li>
+      <ul class="team reveal">
+        <li class="lead-card"><span class="avatar" aria-hidden="true">İD</span><div><div class="role">Yürütücü</div><div class="name">Doç. Dr. İbrahim Demirci</div></div></li>
+        <li><span class="avatar" aria-hidden="true">OH</span><div><div class="role">Araştırmacı</div><div class="name">Doç. Dr. Osman Hatun</div></div></li>
+        <li><span class="avatar" aria-hidden="true">RB</span><div><div class="role">Araştırmacı</div><div class="name">Doç. Dr. Rahime Çobanoğlu Beyçayiri</div></div></li>
+        <li><span class="avatar" aria-hidden="true">GY</span><div><div class="role">Araştırmacı</div><div class="name">Doç. Dr. Gürol Yokuş</div></div></li>
+        <li><span class="avatar" aria-hidden="true">MÖ</span><div><div class="role">Araştırmacı</div><div class="name">Dr. Öğr. Üyesi Mehmet Berkay Özünlü</div></div></li>
+        <li><span class="avatar" aria-hidden="true">OF</span><div><div class="role">Araştırmacı</div><div class="name">Dr. Öğr. Üyesi Ozan Filiz</div></div></li>
+        <li><span class="avatar" aria-hidden="true">ŞZ</span><div><div class="role">Danışman</div><div class="name">Prof. Dr. Şerife Gonca Zeren</div></div></li>
+        <li><span class="avatar" aria-hidden="true">ŞI</span><div><div class="role">Danışman</div><div class="name">Prof. Dr. Şerife Işık</div></div></li>
       </ul>
     </div>
   </section>
 
   <section class="section" id="duyurular">
     <div class="wrap">
-      <div class="section-head">
+      <div class="section-head reveal">
         <h2>Duyurular</h2>
         <p>Katılım çağrıları, etkinlikler ve yayınlar burada paylaşılacaktır.</p>
       </div>
@@ -188,12 +206,12 @@
 <footer class="foot">
   <div class="wrap">
     <div>
-      <p class="support">Bu proje, TÜBİTAK 3501 Kariyer Geliştirme Programı kapsamında [PROJE NO] numaralı proje olarak desteklenmektedir.</p>
-      <small>Sinop Üniversitesi</small>
+      <p class="support">Bu çalışma, Türkiye Bilimsel ve Teknolojik Araştırma Kurumu (TÜBİTAK) tarafından 126K435 numaralı proje ile desteklenmiştir. Projeye verdiği destekten ötürü TÜBİTAK'a teşekkürlerimizi sunarız.</p>
+      <div class="org"><img src="assets/sinop-universitesi.png" alt="Sinop Üniversitesi logosu" width="56" height="54"><span>Sinop Üniversitesi</span></div>
     </div>
     <div>
       <h3>İletişim</h3>
-      <p>[İLETİŞİM E-POSTASI]</p>
+      <p><a href="mailto:pozkap.snu@gmail.com">pozkap.snu@gmail.com</a></p>
       <p><a href="en/" lang="en" hreflang="en">English version</a></p>
     </div>
   </div>

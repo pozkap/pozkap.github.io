@@ -2,14 +2,23 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<script>document.documentElement.classList.add("js")</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>POZKAP | Positive Character Psychoeducation Program</title>
 <meta name="description" content="A psychoeducation program that supports university students' adjustment and well-being through character strengths, delivered face to face and online. Sinop University, TÜBİTAK 3501 project.">
+<meta property="og:description" content="A psychoeducation program that supports university students' adjustment and well-being through character strengths, delivered face to face and online. Sinop University, TÜBİTAK 3501 project.">
 <link rel="alternate" hreflang="tr" href="../">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../style.css">
+<meta name="theme-color" content="#fbfbfd" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#14132a" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:title" content="POZKAP | Positive Character Psychoeducation Program">
+<meta property="og:url" content="https://pozkap.github.io/en/">
+<meta property="og:image" content="https://pozkap.github.io/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 </head>
 <body>
@@ -49,9 +58,10 @@
 
       <figure class="strengths" aria-labelledby="s-title">
         <div class="strengths-head">
-          <strong id="s-title">24 character strengths, 6 virtues</strong>
-          <p>Peterson and Seligman (2004) classification</p>
+          <strong id="s-title">Six virtues, 24 character strengths</strong>
+          <p>Pick a virtue or explore a slice</p>
         </div>
+        <div class="wheel-wrap"><div class="wheel-center" aria-live="polite"><b class="big">24</b><span>character strengths</span></div></div>
         <ul class="field" id="field">
           <li class="bilgelik">Creativity</li><li class="bilgelik">Curiosity</li><li class="bilgelik">Judgment</li><li class="bilgelik">Love of learning</li><li class="bilgelik">Perspective</li>
           <li class="cesaret">Bravery</li><li class="cesaret">Perseverance</li><li class="cesaret">Honesty</li><li class="cesaret">Zest</li>
@@ -72,14 +82,15 @@
     </div>
   </section>
 
-  <section class="section" id="program">
+  <section class="section tint" id="program">
     <div class="wrap">
-      <div class="section-head">
+      <div class="section-head reveal">
         <h2>One program, two formats</h2>
         <p>Traditional adjustment programs mostly aim to reduce problems and provide information. POZKAP instead helps students discover their strengths and use them in university life. Its content will be built on a needs analysis conducted with students.</p>
       </div>
-      <div class="formats">
+      <div class="formats reveal">
         <article class="format">
+          <div class="format-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><path d="M15 14.5c.6-.3 1.3-.5 2-.5 2.2 0 4 1.8 4 4"/></svg></div>
           <h3>Face-to-face group sessions</h3>
           <p>Weekly structured sessions led by two group leaders specialized in psychological counseling and guidance.</p>
           <ul class="facts">
@@ -89,6 +100,7 @@
           </ul>
         </article>
         <article class="format">
+          <div class="format-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M10.5 18.5h3"/><path d="M9 8.5l2 2 4-4"/></svg></div>
           <h3>Online self-help</h3>
           <p>A web-based platform where students progress at their own pace. It offers content personalized by an initial assessment, weekly tasks, a resource library and a moderated sharing space.</p>
           <ul class="facts">
@@ -102,11 +114,11 @@
 
   <section class="section" id="basis">
     <div class="wrap">
-      <div class="section-head">
+      <div class="section-head reveal">
         <h2>Theoretical basis</h2>
         <p>The program brings three frameworks together. Character strengths are its tool, PERMA defines well-being, and the adjustment model defines the dimensions of university life.</p>
       </div>
-      <div class="basis">
+      <div class="basis reveal">
         <div>
           <h3>Character strengths</h3>
           <p>Peterson and Seligman's (2004) classification describes positive traits as 24 strengths grouped under six virtues.</p>
@@ -126,57 +138,63 @@
 
   <section class="section" id="process">
     <div class="wrap">
-      <div class="section-head">
+      <div class="section-head reveal">
         <h2>Project process</h2>
         <p>The project has five work packages. The findings of each stage shape the next.</p>
       </div>
+      <div class="months" aria-hidden="true"><span>mo</span><div class="scale"><span style="left:1.67%">1</span><span style="left:18.33%">6</span><span style="left:38.33%">12</span><span style="left:58.33%">18</span><span style="left:78.33%">24</span><span style="left:98.33%">30</span></div></div>
       <ol class="steps">
-        <li>
+        <li class="reveal">
           <div><h3>Needs analysis</h3><p>Individual interviews with students and a large-scale survey built on the interview findings.</p></div>
           <p class="out"><b>OUTPUT</b>Students' priority needs</p>
+          <div class="bar" style="--s:1;--e:8"><i></i><em>Months 1–8</em></div>
         </li>
-        <li>
+        <li class="reveal">
           <div><h3>Program development</h3><p>Program and learning outcomes, activities and materials for 12 sessions, expert review.</p></div>
           <p class="out"><b>OUTPUT</b>Facilitator guide and session materials</p>
+          <div class="bar" style="--s:9;--e:16"><i></i><em>Months 9–16</em></div>
         </li>
-        <li>
+        <li class="reveal">
           <div><h3>Online platform development</h3><p>A mobile-friendly, modular self-help platform that protects personal data.</p></div>
           <p class="out"><b>OUTPUT</b>Online self-help platform</p>
+          <div class="bar" style="--s:10;--e:16"><i></i><em>Months 10–16</em></div>
         </li>
-        <li>
+        <li class="reveal">
           <div><h3>Pilot and experimental study</h3><p>A pilot study and revision, followed by a controlled experimental implementation.</p></div>
           <p class="out"><b>OUTPUT</b>Pretest, posttest and follow-up data</p>
+          <div class="bar end" style="--s:17;--e:24"><i></i><em>Months 17–24</em></div>
         </li>
-        <li>
+        <li class="reveal">
           <div><h3>Evaluation and dissemination</h3><p>Integration of quantitative and qualitative findings, a booklet, facilitator training and open access to the platform.</p></div>
           <p class="out"><b>OUTPUT</b>Booklet, conference papers and articles</p>
+          <div class="bar end" style="--s:25;--e:30"><i></i><em>Months 25–30</em></div>
         </li>
       </ol>
     </div>
   </section>
 
-  <section class="section" id="team">
+  <section class="section tint" id="team">
     <div class="wrap">
-      <div class="section-head">
+      <div class="section-head reveal">
         <h2>Project team</h2>
         <p>Researchers from psychological counseling and guidance, curriculum and instruction, and instructional technology.</p>
       </div>
-      <ul class="team">
-        <li class="lead-card"><div class="role">Principal investigator</div><div class="name">Assoc. Prof. İbrahim Demirci</div></li>
-        <li><div class="role">Researcher</div><div class="name">Assoc. Prof. Osman Hatun</div></li>
-        <li><div class="role">Researcher</div><div class="name">Assoc. Prof. Rahime Çobanoğlu Beyçayiri</div></li>
-        <li><div class="role">Researcher</div><div class="name">Assoc. Prof. Gürol Yokuş</div></li>
-        <li><div class="role">Researcher</div><div class="name">Asst. Prof. Mehmet Berkay Özünlü</div></li>
-        <li><div class="role">Researcher</div><div class="name">Asst. Prof. Ozan Filiz</div></li>
-        <li><div class="role">Advisor</div><div class="name">Prof. Şerife Gonca Zeren</div></li>
-        <li><div class="role">Advisor</div><div class="name">Prof. Şerife Işık</div></li>
+      <ul class="team reveal">
+        <li class="lead-card"><span class="avatar" aria-hidden="true">İD</span><div><div class="role">Principal investigator</div><div class="name">Assoc. Prof. İbrahim Demirci</div></div></li>
+        <li><span class="avatar" aria-hidden="true">OH</span><div><div class="role">Researcher</div><div class="name">Assoc. Prof. Osman Hatun</div></div></li>
+        <li><span class="avatar" aria-hidden="true">RB</span><div><div class="role">Researcher</div><div class="name">Assoc. Prof. Rahime Çobanoğlu Beyçayiri</div></div></li>
+        <li><span class="avatar" aria-hidden="true">GY</span><div><div class="role">Researcher</div><div class="name">Assoc. Prof. Gürol Yokuş</div></div></li>
+        <li><span class="avatar" aria-hidden="true">MÖ</span><div><div class="role">Researcher</div><div class="name">Asst. Prof. Mehmet Berkay Özünlü</div></div></li>
+        <li><span class="avatar" aria-hidden="true">OF</span><div><div class="role">Researcher</div><div class="name">Asst. Prof. Ozan Filiz</div></div></li>
+        <li><span class="avatar" aria-hidden="true">ŞZ</span><div><div class="role">Advisor</div><div class="name">Prof. Şerife Gonca Zeren</div></div></li>
+        <li><span class="avatar" aria-hidden="true">ŞI</span><div><div class="role">Advisor</div><div class="name">Prof. Şerife Işık</div></div></li>
       </ul>
     </div>
   </section>
 
   <section class="section" id="news">
     <div class="wrap">
-      <div class="section-head">
+      <div class="section-head reveal">
         <h2>News</h2>
         <p>Calls for participation, events and publications will be shared here.</p>
       </div>
@@ -188,12 +206,12 @@
 <footer class="foot">
   <div class="wrap">
     <div>
-      <p class="support">This project is supported by TÜBİTAK under the 3501 Career Development Program, project no. [PROJECT NO].</p>
-      <small>Sinop University</small>
+      <p class="support">This study was supported by Scientific and Technological Research Council of Türkiye (TUBITAK) under the Grant Number 126K435. The authors thank to TUBITAK for their supports.</p>
+      <div class="org"><img src="../assets/sinop-universitesi.png" alt="Sinop University logo" width="56" height="54"><span>Sinop University</span></div>
     </div>
     <div>
       <h3>Contact</h3>
-      <p>[CONTACT EMAIL]</p>
+      <p><a href="mailto:pozkap.snu@gmail.com">pozkap.snu@gmail.com</a></p>
       <p><a href="../" lang="tr" hreflang="tr">Türkçe sürüm</a></p>
     </div>
   </div>
