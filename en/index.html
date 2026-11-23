@@ -10,10 +10,10 @@
 <link rel="alternate" hreflang="tr" href="../">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../style.css">
-<meta name="theme-color" content="#fbfbfd" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#14132a" media="(prefers-color-scheme: dark)">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css?v=8">
+<meta name="theme-color" content="#fbfaf8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0f1b33" media="(prefers-color-scheme: dark)">
 <meta property="og:type" content="website">
 <meta property="og:title" content="POZKAP | Positive Character Psychoeducation Program">
 <meta property="og:url" content="https://pozkap.github.io/en/">
@@ -27,17 +27,15 @@
 <header class="top">
   <div class="wrap">
     <a class="brand" href="./" aria-label="POZKAP home">
-      <span class="brand-dots" aria-hidden="true">
-        <i style="background:var(--v-bilgelik)"></i><i style="background:var(--v-cesaret)"></i><i style="background:var(--v-insanlik)"></i>
-        <i style="background:var(--v-adalet)"></i><i style="background:var(--v-olculuk)"></i><i style="background:var(--v-askinlik)"></i>
-      </span>
+      <svg class="brand-mark" viewBox="-170 -170 340 340" aria-hidden="true"><defs><mask id="bm" maskUnits="userSpaceOnUse" x="-170" y="-170" width="340" height="340"><rect x="-170" y="-170" width="340" height="340" fill="#fff"/><path d="M-150,84 C-70,112 -14,114 24,112 C72,110 112,94 166,44" fill="none" stroke="#000" stroke-width="12"/></mask><clipPath id="bc"><path d="M-150,84 C-70,112 -14,114 24,112 C72,110 112,94 166,44 L166,170 L-150,170Z"/></clipPath></defs>
+<g transform="translate(0,-10)"><g fill="currentColor" transform="rotate(8 -57 64)"><rect x="-74" y="-132" width="34" height="194" rx="5"/><path fill-rule="evenodd" d="M-42,-132 H-4 C58,-132 96,-93 96,-45 C96,3 58,42 -4,42 H-42 Z M-40,-90 H-6 C28,-90 50,-70 50,-45 C50,-20 28,0 -6,0 H-40 Z"/></g><path mask="url(#bm)" d="M-124,68 C-80,76 -30,78 20,76 C70,74 112,60 146,30 C138,96 92,132 10,132 C-62,132 -110,112 -124,68 Z" fill="currentColor"/><g clip-path="url(#bc)"><path mask="url(#bm)" d="M-124,68 C-80,76 -30,78 20,76 C70,74 112,60 146,30 C138,96 92,132 10,132 C-62,132 -110,112 -124,68 Z" fill="#ff7847"/></g></g></svg>
       POZKAP
     </a>
     <nav aria-label="Main menu">
+      <a href="#news" class="hide-sm">News</a>
       <a href="#program">Program</a>
       <a href="#process" class="hide-sm">Process</a>
       <a href="#team">Team</a>
-      <a href="#news" class="hide-sm">News</a>
       <a class="lang" href="../" lang="tr" hreflang="tr">TR</a>
     </nav>
   </div>
@@ -52,14 +50,12 @@
         <p class="lead">POZKAP is a psychoeducation program designed to support university students' adjustment and well-being through character strengths. It will be delivered in face-to-face group sessions and on an online self-help platform, and the effectiveness of both formats will be evaluated.</p>
         <div class="cta-row">
           <a class="btn primary" href="#program">Explore the program</a>
-          <span class="status">The online platform is in development</span>
         </div>
       </div>
 
       <figure class="strengths" aria-labelledby="s-title">
         <div class="strengths-head">
           <strong id="s-title">Six virtues, 24 character strengths</strong>
-          <p>Pick a virtue or explore a slice</p>
         </div>
         <div class="wheel-wrap"><div class="wheel-center" aria-live="polite"><b class="big">24</b><span>character strengths</span></div></div>
         <ul class="field" id="field">
@@ -78,7 +74,29 @@
           <li><button type="button" class="olculuk" data-v="olculuk" aria-pressed="false">Temperance</button></li>
           <li><button type="button" class="askinlik" data-v="askinlik" aria-pressed="false">Transcendence</button></li>
         </ul>
+        <p class="strengths-hint">Pick a virtue or explore a slice</p>
       </figure>
+    </div>
+  </section>
+
+  <section class="section" id="news">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>Announcements and news</h2>
+        <p>Calls for participation, events, publications and project news are shared here.</p>
+      </div>
+      <div class="feed" id="feed" data-src="../icerik.json" data-more="Details" data-news-empty="No news yet. Project news and photos will appear here." data-notes-empty="No announcements yet.">
+        <div class="feed-news">
+          <h3 class="feed-title">News</h3>
+          <ul class="news-list" id="news-list"><li class="news-empty">No news yet. Project news and photos will appear here.</li></ul>
+        </div>
+        <aside class="feed-notes" aria-labelledby="notes-title">
+          <h3 class="feed-title" id="notes-title">Announcements</h3>
+          <ul class="note-list" id="note-list">
+            <li><time datetime="2026-11-23">23 November 2026</time><strong>Our project website is live</strong><p>The POZKAP website is now online. You can find information about the program, the project timeline and the team here. Announcements and news will be shared in this section.</p></li>
+          </ul>
+        </aside>
+      </div>
     </div>
   </section>
 
@@ -86,7 +104,7 @@
     <div class="wrap">
       <div class="section-head reveal">
         <h2>One program, two formats</h2>
-        <p>Traditional adjustment programs mostly aim to reduce problems and provide information. POZKAP instead helps students discover their strengths and use them in university life. Its content will be built on a needs analysis conducted with students.</p>
+        <p>Traditional adjustment programs mostly aim to reduce problems and provide information. POZKAP instead helps students discover their strengths and use them in university life.</p>
       </div>
       <div class="formats reveal">
         <article class="format">
@@ -180,27 +198,18 @@
         <p>Researchers from psychological counseling and guidance, curriculum and instruction, and instructional technology.</p>
       </div>
       <ul class="team reveal">
-        <li class="lead-card"><span class="avatar" aria-hidden="true">İD</span><div><div class="role">Principal investigator</div><div class="name">Assoc. Prof. İbrahim Demirci</div></div></li>
-        <li><span class="avatar" aria-hidden="true">OH</span><div><div class="role">Researcher</div><div class="name">Assoc. Prof. Osman Hatun</div></div></li>
-        <li><span class="avatar" aria-hidden="true">RB</span><div><div class="role">Researcher</div><div class="name">Assoc. Prof. Rahime Çobanoğlu Beyçayiri</div></div></li>
-        <li><span class="avatar" aria-hidden="true">GY</span><div><div class="role">Researcher</div><div class="name">Assoc. Prof. Gürol Yokuş</div></div></li>
-        <li><span class="avatar" aria-hidden="true">MÖ</span><div><div class="role">Researcher</div><div class="name">Asst. Prof. Mehmet Berkay Özünlü</div></div></li>
-        <li><span class="avatar" aria-hidden="true">OF</span><div><div class="role">Researcher</div><div class="name">Asst. Prof. Ozan Filiz</div></div></li>
-        <li><span class="avatar" aria-hidden="true">ŞZ</span><div><div class="role">Advisor</div><div class="name">Prof. Şerife Gonca Zeren</div></div></li>
-        <li><span class="avatar" aria-hidden="true">ŞI</span><div><div class="role">Advisor</div><div class="name">Prof. Şerife Işık</div></div></li>
+        <li class="lead-card"><img class="avatar" src="../assets/ekip/demirci.jpg" alt="" width="72" height="72" loading="lazy"><div><div class="role">Principal investigator</div><div class="name">Assoc. Prof. İbrahim Demirci</div></div></li>
+        <li><img class="avatar" src="../assets/ekip/hatun.jpg" alt="" width="72" height="72" loading="lazy"><div><div class="role">Researcher</div><div class="name">Assoc. Prof. Osman Hatun</div></div></li>
+        <li><img class="avatar" src="../assets/ekip/cobanoglu.jpg" alt="" width="72" height="72" loading="lazy"><div><div class="role">Researcher</div><div class="name">Assoc. Prof. Rahime Çobanoğlu Beyçayiri</div></div></li>
+        <li><img class="avatar" src="../assets/ekip/yokus.jpg" alt="" width="72" height="72" loading="lazy"><div><div class="role">Researcher</div><div class="name">Assoc. Prof. Gürol Yokuş</div></div></li>
+        <li><img class="avatar" src="../assets/ekip/ozunlu.jpg" alt="" width="72" height="72" loading="lazy"><div><div class="role">Researcher</div><div class="name">Asst. Prof. Mehmet Berkay Özünlü</div></div></li>
+        <li><img class="avatar" src="../assets/ekip/filiz.jpg" alt="" width="72" height="72" loading="lazy"><div><div class="role">Researcher</div><div class="name">Asst. Prof. Ozan Filiz</div></div></li>
+        <li><img class="avatar" src="../assets/ekip/zeren.jpg" alt="" width="72" height="72" loading="lazy"><div><div class="role">Advisor</div><div class="name">Prof. Şerife Gonca Zeren</div></div></li>
+        <li><img class="avatar" src="../assets/ekip/isik.jpg" alt="" width="72" height="72" loading="lazy"><div><div class="role">Advisor</div><div class="name">Prof. Şerife Işık</div></div></li>
       </ul>
     </div>
   </section>
 
-  <section class="section" id="news">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <h2>News</h2>
-        <p>Calls for participation, events and publications will be shared here.</p>
-      </div>
-      <div class="empty"><p>No news yet. The first announcement will follow the project launch meeting.</p></div>
-    </div>
-  </section>
 </main>
 
 <footer class="foot">
@@ -217,6 +226,6 @@
   </div>
 </footer>
 
-<script src="../site.js" defer></script>
+<script src="../site.js?v=8" defer></script>
 </body>
 </html>

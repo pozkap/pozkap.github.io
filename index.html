@@ -10,10 +10,10 @@
 <link rel="alternate" hreflang="en" href="en/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<meta name="theme-color" content="#fbfbfd" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#14132a" media="(prefers-color-scheme: dark)">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=8">
+<meta name="theme-color" content="#fbfaf8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0f1b33" media="(prefers-color-scheme: dark)">
 <meta property="og:type" content="website">
 <meta property="og:title" content="POZKAP | Pozitif Karakter Psikoeğitim Programı">
 <meta property="og:url" content="https://pozkap.github.io/">
@@ -27,17 +27,15 @@
 <header class="top">
   <div class="wrap">
     <a class="brand" href="#" aria-label="POZKAP ana sayfa">
-      <span class="brand-dots" aria-hidden="true">
-        <i style="background:var(--v-bilgelik)"></i><i style="background:var(--v-cesaret)"></i><i style="background:var(--v-insanlik)"></i>
-        <i style="background:var(--v-adalet)"></i><i style="background:var(--v-olculuk)"></i><i style="background:var(--v-askinlik)"></i>
-      </span>
+      <svg class="brand-mark" viewBox="-170 -170 340 340" aria-hidden="true"><defs><mask id="bm" maskUnits="userSpaceOnUse" x="-170" y="-170" width="340" height="340"><rect x="-170" y="-170" width="340" height="340" fill="#fff"/><path d="M-150,84 C-70,112 -14,114 24,112 C72,110 112,94 166,44" fill="none" stroke="#000" stroke-width="12"/></mask><clipPath id="bc"><path d="M-150,84 C-70,112 -14,114 24,112 C72,110 112,94 166,44 L166,170 L-150,170Z"/></clipPath></defs>
+<g transform="translate(0,-10)"><g fill="currentColor" transform="rotate(8 -57 64)"><rect x="-74" y="-132" width="34" height="194" rx="5"/><path fill-rule="evenodd" d="M-42,-132 H-4 C58,-132 96,-93 96,-45 C96,3 58,42 -4,42 H-42 Z M-40,-90 H-6 C28,-90 50,-70 50,-45 C50,-20 28,0 -6,0 H-40 Z"/></g><path mask="url(#bm)" d="M-124,68 C-80,76 -30,78 20,76 C70,74 112,60 146,30 C138,96 92,132 10,132 C-62,132 -110,112 -124,68 Z" fill="currentColor"/><g clip-path="url(#bc)"><path mask="url(#bm)" d="M-124,68 C-80,76 -30,78 20,76 C70,74 112,60 146,30 C138,96 92,132 10,132 C-62,132 -110,112 -124,68 Z" fill="#ff7847"/></g></g></svg>
       POZKAP
     </a>
     <nav aria-label="Ana menü">
+      <a href="#duyurular" class="hide-sm">Duyurular</a>
       <a href="#program">Program</a>
       <a href="#surec" class="hide-sm">Süreç</a>
       <a href="#ekip">Ekip</a>
-      <a href="#duyurular" class="hide-sm">Duyurular</a>
       <a class="lang" href="en/" lang="en" hreflang="en">EN</a>
     </nav>
   </div>
@@ -52,14 +50,12 @@
         <p class="lead">POZKAP, üniversite öğrencilerinin uyumunu ve iyi oluşunu karakter güçleri üzerinden desteklemek için geliştirilen bir psikoeğitim programıdır. Program yüz yüze grup oturumlarıyla ve çevrimiçi kendi kendine yardım platformuyla uygulanacak, iki biçimin etkililiği bilimsel olarak değerlendirilecektir.</p>
         <div class="cta-row">
           <a class="btn primary" href="#program">Programı inceleyin</a>
-          <span class="status">Çevrimiçi platform geliştirme aşamasında</span>
         </div>
       </div>
 
       <figure class="strengths" aria-labelledby="guc-baslik">
         <div class="strengths-head">
           <strong id="guc-baslik">Altı erdem, 24 karakter gücü</strong>
-          <p>Bir erdem seçin ya da bir dilimi inceleyin</p>
         </div>
         <div class="wheel-wrap"><div class="wheel-center" aria-live="polite"><b class="big">24</b><span>karakter gücü</span></div></div>
         <ul class="field" id="field">
@@ -78,7 +74,29 @@
           <li><button type="button" class="olculuk" data-v="olculuk" aria-pressed="false">Ölçülülük</button></li>
           <li><button type="button" class="askinlik" data-v="askinlik" aria-pressed="false">Aşkınlık</button></li>
         </ul>
+        <p class="strengths-hint">Bir erdem seçin ya da bir dilimi inceleyin</p>
       </figure>
+    </div>
+  </section>
+
+  <section class="section" id="duyurular">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>Duyurular ve haberler</h2>
+        <p>Katılım çağrıları, etkinlikler, yayınlar ve projeden haberler burada paylaşılır.</p>
+      </div>
+      <div class="feed" id="feed" data-src="icerik.json" data-more="Ayrıntı" data-news-empty="Henüz haber yok. Projeden haberler ve fotoğraflar burada yer alacak." data-notes-empty="Henüz duyuru yok.">
+        <div class="feed-news">
+          <h3 class="feed-title">Haberler</h3>
+          <ul class="news-list" id="news-list"><li class="news-empty">Henüz haber yok. Projeden haberler ve fotoğraflar burada yer alacak.</li></ul>
+        </div>
+        <aside class="feed-notes" aria-labelledby="notes-title">
+          <h3 class="feed-title" id="notes-title">Duyurular</h3>
+          <ul class="note-list" id="note-list">
+            <li><time datetime="2026-11-23">23 Kasım 2026</time><strong>Proje web sitemiz yayına alındı</strong><p>POZKAP'ın tanıtım sitesi yayında. Program, proje süreci ve ekip hakkındaki bilgilere bu siteden ulaşabilirsiniz. Duyurular ve haberler bu bölümde paylaşılacaktır.</p></li>
+          </ul>
+        </aside>
+      </div>
     </div>
   </section>
 
@@ -86,7 +104,7 @@
     <div class="wrap">
       <div class="section-head reveal">
         <h2>Bir program, iki uygulama biçimi</h2>
-        <p>Geleneksel uyum programları çoğunlukla sorunları azaltmaya ve bilgi vermeye odaklanır. POZKAP ise öğrencinin güçlü yönlerini keşfetmesini ve bunları üniversite yaşamında kullanmasını hedefler. İçerik, öğrencilerle yapılacak bir ihtiyaç analizine dayanarak geliştirilecektir.</p>
+        <p>Geleneksel uyum programları çoğunlukla sorunları azaltmaya ve bilgi vermeye odaklanır. POZKAP ise öğrencinin güçlü yönlerini keşfetmesini ve bunları üniversite yaşamında kullanmasını hedefler.</p>
       </div>
       <div class="formats reveal">
         <article class="format">
@@ -180,27 +198,18 @@
         <p>Psikolojik danışmanlık ve rehberlik, eğitim programları ve öğretim, öğretim teknolojileri alanlarından araştırmacılar.</p>
       </div>
       <ul class="team reveal">
-        <li class="lead-card"><span class="avatar" aria-hidden="true">İD</span><div><div class="role">Yürütücü</div><div class="name">Doç. Dr. İbrahim Demirci</div></div></li>
-        <li><span class="avatar" aria-hidden="true">OH</span><div><div class="role">Araştırmacı</div><div class="name">Doç. Dr. Osman Hatun</div></div></li>
-        <li><span class="avatar" aria-hidden="true">RB</span><div><div class="role">Araştırmacı</div><div class="name">Doç. Dr. Rahime Çobanoğlu Beyçayiri</div></div></li>
-        <li><span class="avatar" aria-hidden="true">GY</span><div><div class="role">Araştırmacı</div><div class="name">Doç. Dr. Gürol Yokuş</div></div></li>
-        <li><span class="avatar" aria-hidden="true">MÖ</span><div><div class="role">Araştırmacı</div><div class="name">Dr. Öğr. Üyesi Mehmet Berkay Özünlü</div></div></li>
-        <li><span class="avatar" aria-hidden="true">OF</span><div><div class="role">Araştırmacı</div><div class="name">Dr. Öğr. Üyesi Ozan Filiz</div></div></li>
-        <li><span class="avatar" aria-hidden="true">ŞZ</span><div><div class="role">Danışman</div><div class="name">Prof. Dr. Şerife Gonca Zeren</div></div></li>
-        <li><span class="avatar" aria-hidden="true">ŞI</span><div><div class="role">Danışman</div><div class="name">Prof. Dr. Şerife Işık</div></div></li>
+        <li class="lead-card"><img class="avatar" src="assets/ekip/demirci.jpg" alt="" width="72" height="72" loading="lazy"><div><div class="role">Yürütücü</div><div class="name">Doç. Dr. İbrahim Demirci</div></div></li>
+        <li><img class="avatar" src="assets/ekip/hatun.jpg" alt="" width="72" height="72" loading="lazy"><div><div class="role">Araştırmacı</div><div class="name">Doç. Dr. Osman Hatun</div></div></li>
+        <li><img class="avatar" src="assets/ekip/cobanoglu.jpg" alt="" width="72" height="72" loading="lazy"><div><div class="role">Araştırmacı</div><div class="name">Doç. Dr. Rahime Çobanoğlu Beyçayiri</div></div></li>
+        <li><img class="avatar" src="assets/ekip/yokus.jpg" alt="" width="72" height="72" loading="lazy"><div><div class="role">Araştırmacı</div><div class="name">Doç. Dr. Gürol Yokuş</div></div></li>
+        <li><img class="avatar" src="assets/ekip/ozunlu.jpg" alt="" width="72" height="72" loading="lazy"><div><div class="role">Araştırmacı</div><div class="name">Dr. Öğr. Üyesi Mehmet Berkay Özünlü</div></div></li>
+        <li><img class="avatar" src="assets/ekip/filiz.jpg" alt="" width="72" height="72" loading="lazy"><div><div class="role">Araştırmacı</div><div class="name">Dr. Öğr. Üyesi Ozan Filiz</div></div></li>
+        <li><img class="avatar" src="assets/ekip/zeren.jpg" alt="" width="72" height="72" loading="lazy"><div><div class="role">Danışman</div><div class="name">Prof. Dr. Şerife Gonca Zeren</div></div></li>
+        <li><img class="avatar" src="assets/ekip/isik.jpg" alt="" width="72" height="72" loading="lazy"><div><div class="role">Danışman</div><div class="name">Prof. Dr. Şerife Işık</div></div></li>
       </ul>
     </div>
   </section>
 
-  <section class="section" id="duyurular">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <h2>Duyurular</h2>
-        <p>Katılım çağrıları, etkinlikler ve yayınlar burada paylaşılacaktır.</p>
-      </div>
-      <div class="empty"><p>Henüz duyuru yok. İlk duyuru proje tanıtım toplantısıyla birlikte yayımlanacaktır.</p></div>
-    </div>
-  </section>
 </main>
 
 <footer class="foot">
@@ -217,6 +226,6 @@
   </div>
 </footer>
 
-<script src="site.js" defer></script>
+<script src="site.js?v=8" defer></script>
 </body>
 </html>

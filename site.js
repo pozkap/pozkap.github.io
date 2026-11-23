@@ -90,4 +90,49 @@
     }, { rootMargin: '0px 0px -8% 0px' });
     els.forEach(function (e) { io.observe(e); });
   }
+  // 4. Bölüm başlıkları: iki satıra bölünen başlığın kutusunu metnin gerçek genişliğine indir.
+  //    Böylece başlık ile açıklama çizgisi arasındaki boşluk her bölümde eşit olur.
+  function fitHeads() {
+    document.querySelectorAll('.section-head h2').forEach(function (h) {
+      h.style.width = '';
+      if (window.matchMedia('(max-width: 820px)').matches) return;
+      var r = document.createRange(); r.selectNodeContents(h);
+      var w = 0; Array.prototype.forEach.call(r.getClientRects(), function (b) { w = Math.max(w, b.width); });
+      if (w) h.style.width = Math.ceil(w) + 1 + 'px';
+    });
+  }
+  fitHeads();
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitHeads);
+  window.addEventListener('resize', fitHeads);
+  if ('ResizeObserver' in window) new ResizeObserver(fitHeads).observe(document.documentElement);
+  // 5. Duyurular ve haberler: içerik icerik.json dosyasından gelir. JS yoksa sayfadaki ilk kayıt görünür.
+  //    Haberler solda görselli kartlar, duyurular sağda metin tabanlı kısa liste.
+  var feed = document.getElementById('feed');
+  if (feed && window.fetch) {
+    var lang = (document.documentElement.lang || 'tr').slice(0, 2) === 'en' ? 'en' : 'tr';
+    var base = feed.dataset.src.replace('icerik.json', '');
+    function esc(t) { var d = document.createElement('div'); d.textContent = t == null ? '' : t; return d.innerHTML; }
+    function txt(x) { return (x[lang] && x[lang].baslik) ? x[lang] : (x.tr || {}); }
+    function date(x) {
+      var d = new Date(x.tarih + 'T12:00:00');
+      var s = isNaN(d) ? x.tarih : d.toLocaleDateString(lang === 'en' ? 'en-GB' : 'tr-TR', { day: 'numeric', month: 'long', year: 'numeric' });
+      return '<time datetime="' + esc(x.tarih) + '">' + esc(s) + '</time>';
+    }
+    function url(u) { return /^(https?:|mailto:|\/)/.test(u) ? u : base + u; }
+    function link(x) { return x.baglanti ? '<a class="more" href="' + esc(url(x.baglanti)) + '">' + esc(feed.dataset.more) + '</a>' : ''; }
+    fetch(feed.dataset.src, { cache: 'no-cache' }).then(function (r) { return r.json(); }).then(function (j) {
+      var all = (j || []).slice().sort(function (a, b) { return a.tarih < b.tarih ? 1 : -1; });
+      var news = all.filter(function (x) { return x.tur === 'haber'; });
+      var notes = all.filter(function (x) { return x.tur !== 'haber'; });
+      document.getElementById('news-list').innerHTML = news.length ? news.map(function (x, n) {
+        var c = txt(x);
+        var img = x.gorsel ? '<img src="' + esc(url(x.gorsel)) + '" alt="" loading="lazy">' : '';
+        return '<li class="news-card' + (n === 0 ? ' lead' : '') + (img ? '' : ' no-img') + '">' + img + '<div class="news-body">' + date(x) + '<h4>' + esc(c.baslik) + '</h4><p>' + esc(c.metin) + '</p>' + link(x) + '</div></li>';
+      }).join('') : '<li class="news-empty">' + esc(feed.dataset.newsEmpty) + '</li>';
+      document.getElementById('note-list').innerHTML = notes.length ? notes.map(function (x) {
+        var c = txt(x);
+        return '<li>' + date(x) + '<strong>' + esc(c.baslik) + '</strong><p>' + esc(c.metin) + '</p>' + link(x) + '</li>';
+      }).join('') : '<li class="note-empty">' + esc(feed.dataset.notesEmpty) + '</li>';
+    }).catch(function () {});
+  }
 })();

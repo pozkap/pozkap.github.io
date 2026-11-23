@@ -1,0 +1,57 @@
+# Pages CMS ayarı (https://pagescms.org). Site GitHub'da yayına alınınca panel bu dosyayı okur.
+# Panelde tek bir bölüm vardır: "Duyurular ve haberler". Kayıtlar icerik.json dosyasına yazılır;
+# site bu dosyayı okuyup listeyi kendisi oluşturur (site.js, 5. bölüm).
+media:
+  input: assets/haber
+  output: /assets/haber
+content:
+  - name: icerik
+    label: Duyurular ve haberler
+    type: file
+    path: icerik.json
+    format: json
+    list: true
+    fields:
+      - name: tur
+        label: Tür
+        type: select
+        required: true
+        default: duyuru
+        options:
+          values:
+            - value: duyuru
+              label: Duyuru
+            - value: haber
+              label: Haber
+      - name: tarih
+        label: Tarih
+        type: date
+        required: true
+      - name: gorsel
+        label: Görsel (yalnızca haberlerde görünür; isteğe bağlı)
+        type: image
+      - name: baglanti
+        label: Bağlantı (isteğe bağlı; başvuru formu, belge ya da haber adresi)
+        type: string
+      - name: tr
+        label: Türkçe
+        type: object
+        fields:
+          - name: baslik
+            label: Başlık
+            type: string
+            required: true
+          - name: metin
+            label: Metin
+            type: text
+            required: true
+      - name: en
+        label: İngilizce (boş bırakılırsa İngilizce sayfada Türkçe metin görünür)
+        type: object
+        fields:
+          - name: baslik
+            label: Title
+            type: string
+          - name: metin
+            label: Text
+            type: text
