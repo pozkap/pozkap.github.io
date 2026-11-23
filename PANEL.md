@@ -18,4 +18,5 @@ GitHub'da depoya "collaborator" olarak eklenen herkes aynı panele kendi GitHub 
 
 ## Notlar
 - Kayıtlar sitede tarihe göre, en yeni üstte sıralanır.
-- `.pages.yml` henüz gerçek panelde denenmedi; ilk kurulumda alanların doğru göründüğü kontrol edilmeli.
+- Panel 23 Kasım 2026'da kuruldu ve alanların doğru göründüğü kontrol edildi.
+- Panelden yapılan her kayıt GitHub'daki depoyu değiştirir. Bilgisayardaki site klasöründe çalışmadan önce `git pull` ile bu değişiklikler alınmalıdır.

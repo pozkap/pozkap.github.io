@@ -380,7 +380,7 @@ h2 { font-size: clamp(1.8rem, 3.4vw, 2.6rem); font-weight: 700; }
 .news-card { background: var(--paper); border: 1.5px solid var(--line); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; }
 .news-card img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block; background: var(--panel); }
 .news-card.lead { grid-column: 1 / -1; }
-@media (min-width: 621px) { .news-card.lead:not(.no-img) { flex-direction: row; } .news-card.lead:not(.no-img) img { width: 52%; aspect-ratio: 4 / 3; } }
+@media (min-width: 621px) { .news-card.lead:not(.no-img) { flex-direction: row; } .news-card.lead:not(.no-img) img { width: 58%; aspect-ratio: 16 / 9; align-self: center; } }
 .news-body { padding: 18px 20px 20px; }
 .news-body h4 { font-family: var(--display); font-size: 1.2rem; line-height: 1.25; margin: 6px 0 6px; }
 .news-card.lead h4 { font-size: 1.45rem; }

@@ -10,5 +10,18 @@
       "baslik": "Our project website is live",
       "metin": "The POZKAP website is now online. You can find information about the program, the project timeline and the team here. Announcements and news will be shared in this section."
     }
+  },
+  {
+    "tur": "haber",
+    "tarih": "2026-11-20",
+    "gorsel": "/assets/haber/acilis-toplantisi.jpg",
+    "tr": {
+      "baslik": "Proje açılış toplantısı yapıldı",
+      "metin": "Proje ekibi 20 Kasım 2026'da çevrim içi olarak bir araya geldi. Toplantıda projenin tanıtım çalışmaları ve ilk dönemin iş bölümü görüşüldü."
+    },
+    "en": {
+      "baslik": "Project kick-off meeting held",
+      "metin": "The project team met online on 20 November 2026. The meeting covered the project's outreach work and the division of tasks for the first period."
+    }
   }
 ]
