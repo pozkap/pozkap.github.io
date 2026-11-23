@@ -135,4 +135,19 @@
       }).join('') : '<li class="note-empty">' + esc(feed.dataset.notesEmpty) + '</li>';
     }).catch(function () {});
   }
+  // 6. Başa dön düğmesi: bir ekran boyu aşağı inince belirir
+  var top = document.querySelector('.to-top');
+  if (top) {
+    top.hidden = false;
+    var onScroll = function () { top.classList.toggle('show', window.scrollY > window.innerHeight * 0.8); };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+    top.addEventListener('click', function (e) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+      // Yumuşak kaydırma bazı tarayıcılarda çalışmazsa kısa süre sonra doğrudan başa atla
+      setTimeout(function () { if (window.scrollY > 4) window.scrollTo({ top: 0, behavior: 'instant' }); }, 900);
+      var b = document.querySelector('.brand'); if (b) b.focus({ preventScroll: true });
+    });
+  }
 })();
