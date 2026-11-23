@@ -377,6 +377,7 @@ h2 { font-size: clamp(1.8rem, 3.4vw, 2.6rem); font-weight: 700; }
 .feed-title { font-family: var(--body); font-size: 0.85rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-soft); margin: 0 0 14px; }
 .news-list { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
 @media (max-width: 620px) { .news-list { grid-template-columns: 1fr; } }
+.news-list > li { margin: 0; }
 .news-card { background: var(--paper); border: 1.5px solid var(--line); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; }
 .news-card img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block; background: var(--panel); }
 .news-card.lead { grid-column: 1 / -1; }
@@ -386,8 +387,9 @@ h2 { font-size: clamp(1.8rem, 3.4vw, 2.6rem); font-weight: 700; }
 .news-card.lead h4 { font-size: 1.45rem; }
 .news-body p { margin: 0; color: var(--ink-soft); }
 .news-empty { grid-column: 1 / -1; border: 1.5px dashed var(--line); border-radius: var(--radius); padding: 26px 22px; color: var(--ink-soft); }
-.feed-notes { background: var(--panel); border-radius: var(--radius); padding: 22px 22px 8px; }
-.note-list { list-style: none; padding: 0; margin: 0; }
+/* Başlık kutunun dışında: duyuru kutusu ilk haber kartıyla aynı hizada başlar */
+.feed-notes { background: transparent; padding: 0; }
+.note-list { list-style: none; margin: 0; background: var(--panel); border-radius: var(--radius); padding: 22px 22px 6px; }
 .note-list li { padding: 0 0 2px 16px; margin-bottom: 18px; border-left: 3px solid var(--coral); }
 .note-list strong { display: block; font-family: var(--display); font-size: 1.05rem; line-height: 1.3; margin: 2px 0 4px; color: var(--ink); }
 .note-list p { margin: 0; color: var(--ink-soft); font-size: 0.95rem; }
